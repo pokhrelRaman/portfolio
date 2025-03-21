@@ -1,15 +1,15 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Raman",
+  lastName: "Pokhrel",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Game Developer",
   avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "Asia/Nepal", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Nepali", "Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -37,14 +37,9 @@ const social = [
     link: "https://www.linkedin.com/company/once-ui/",
   },
   {
-    name: "X",
-    icon: "x",
-    link: "",
-  },
-  {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "ramanpokh@gmail.com",
   },
 ];
 
@@ -71,10 +66,6 @@ const about = {
   },
   avatar: {
     display: true,
-  },
-  calendar: {
-    display: true,
-    link: "https://cal.com",
   },
   intro: {
     display: true,
