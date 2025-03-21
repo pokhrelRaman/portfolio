@@ -7,13 +7,14 @@ const person = {
     return `${this.firstName} ${this.lastName}`;
   },
   role: "Game Developer",
-  avatar: "/images/avatar.jpg",
-  location: "Asia/Nepal", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  avatar: "/images/avata.jpg",
+  location: "Asia/Kathmandu", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Nepali", "Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
 
+
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
@@ -47,11 +48,13 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Game Developer</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Raman, a dedicated Unity Game Developer with a deep passion for every aspect of game development.
+       I thrive on crafting immersive experiences, from gameplay mechanics to optimization, 
+        I'm always pushing the boundaries of what's possible in interactive entertainment. 
+        Currently, I'm working at <InlineCode>Veda Studios</InlineCode> 
     </>
   ),
 };
@@ -67,14 +70,16 @@ const about = {
   avatar: {
     display: true,
   },
+  calendar: {
+    display: true,
+    link: "https://cal.com",
+  },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        A dedicated game developer with 3+ years of professional experience and a strong foundation in programming. Specialized in multiplayer game development, real-time simulations, and performance optimization. Deep expertise in networking, game mechanics, UI and designs. Passionate about crafting high-performance, engaging games with scalable architectures.
       </>
     ),
   },
@@ -83,17 +88,24 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Veda Studios",
+        timeframe: "Mar 2024 - Present",
+        role: "Unity Game Developer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Designed and implemented scalable networking architecture, ensuring low latency and high performance.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Developed a multiplayer card game with LAN-based networking, allowing players to connect without the internet.
+          </>,
+          <>
+            Built an adaptive UI system that seamlessly adjusts to different screen resolutions and devices.
+          </>,
+          <>
+            Collaborated with backend developers to integrate real-time updates, multiplayer rooms, and dashboard features using Nakama and sockets.
+          </>,
+          <>
+            Worked in toxic work culture.
           </>,
         ],
         images: [
@@ -107,17 +119,24 @@ const about = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
+        company: "Avana Game Studios",
+        timeframe: "Jul 2022 – Apr 2024",
         role: "Lead Designer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Optimized the iOS and Android builds using addressables to reduce game size by 60% .
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Built an adaptive UI system that seamlessly adjusts to different screen resolutions and devices.
+          </>,
+          <>
+            Led the development of a 3D games, handling gameplay mechanics, in-game physics, and animations.
+          </>,
+          <>
+            Developed and fine-tuned fly mechanics, integrating shooting mechanics, hit detection, and movement systems.
+          </>,
+          <>
+            Integrated sound, animations, and particle systems for a seamless gaming experience.
           </>,
         ],
         images: [],
@@ -129,12 +148,8 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Sagarmatha Engineering College",
+        description: <>Studied Electronics Communication and Information Engineering.</>,
       },
     ],
   },
@@ -143,7 +158,7 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Unity",
         description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
