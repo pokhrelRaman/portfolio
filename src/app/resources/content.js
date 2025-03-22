@@ -105,7 +105,13 @@ const about = {
           </>,
           <>
             Collaborated with backend developers to integrate real-time updates, multiplayer rooms, and dashboard features using Nakama and sockets.
-          </>
+          </>,
+          <> 
+            Collaborated with project managers and QA teams to ensure product meets the clients expectation and requirements.
+          </>,
+          <> 
+            Collaborated with design teams to acquire optimized assets and refine designs for better performance and visual consistency..
+        </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -184,16 +190,32 @@ const about = {
       },
     ], 
   },
-  hobby: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
-    skills: [
+  leadership: {
+    title: "Leadership and Achievements",
+    display: true,
+    achievements: [
       {
-        title: "Unity",
-        description: <>Experienced in developing 2D & 3D games, including game mechanics  , adaptive UI , and optimization techniques.</>,
+        title: "President of Robotics Club Of Sagarmatha Engineering College",
+        description: "Led the team in building robots for regional competitions. Worked on team management and fostering innovation. Mentored juniors to uplift their coding skills",
+        icon: "robot", // Optional: can be an icon name (or an image URL)
       },
-    ]
-  }
+      {
+        title: "Mentor for Hackathons",
+        description: "Guided participants to build innovative solutions within 48 hours in Orbit 2.0 organized by engineering vlogs. Provided mentorship and helped design competitive strategies on game, IoT and backend technology.",
+        icon: "lightbulb", // Optional: an icon for this role
+      },
+      {
+        title: "Winner of Delta and Orbit",
+        description: "Led the team to victory in a project demonstration with a laser tag project, showcasing teamwork.",
+        icon: "trophy", // Optional: an icon for winning
+      },
+      {
+        title: "Winner of Hackathon",
+        description: "Won Hackathon organized by COESIS with the educational game we designed and implemented within the time frame of 12hrs.",
+        icon: "medal", // Optional: an icon for hackathon victories
+      },
+    ],
+  },
 };
 
 const blog = {

@@ -66,7 +66,13 @@ export default function About() {
       display: about.technical.display,
       items: about.technical.skills.map((skill) => skill.title),
     },
+    {
+      title: about.leadership.title,
+      display: about.leadership.display,
+      items: about.leadership.achievements.map((achievement) => achievement.title),
+    },
   ];
+
   return (
     <Column maxWidth="m">
       <script
@@ -82,7 +88,7 @@ export default function About() {
             url: `https://${baseURL}/about`,
             image: `${baseURL}/images/${person.avatar}`,
             sameAs: social
-              .filter((item) => item.link && !item.link.startsWith("mailto:")) // Filter out empty links and email links
+              .filter((item) => item.link && !item.link.startsWith("mailto:"))
               .map((item) => item.link),
             worksFor: {
               "@type": "Organization",
@@ -297,11 +303,11 @@ export default function About() {
                 as="h2"
                 id={about.technical.title}
                 variant="display-strong-s"
-                marginBottom="40"
+                marginBottom="m"
               >
                 {about.technical.title}
               </Heading>
-              <Column fillWidth gap="l">
+              <Column fillWidth gap="l" marginBottom="40">
                 {about.technical.skills.map((skill, index) => (
                   <Column key={`${skill}-${index}`} fillWidth gap="4">
                     <Text variant="heading-strong-l">{skill.title}</Text>
@@ -311,6 +317,54 @@ export default function About() {
                     {skill.images && skill.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" gap="12" wrap>
                         {skill.images.map((image, index) => (
+                          <Flex
+                            key={index}
+                            border="neutral-medium"
+                            radius="m"
+                            //@ts-ignore
+                            minWidth={image.width}
+                            //@ts-ignore
+                            height={image.height}
+                          >
+                            <SmartImage
+                              enlarge
+                              radius="m"
+                              //@ts-ignore
+                              sizes={image.width.toString()}
+                              //@ts-ignore
+                              alt={image.alt}
+                              //@ts-ignore
+                              src={image.src}
+                            />
+                          </Flex>
+                        ))}
+                      </Flex>
+                    )}
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+          {about.leadership.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.leadership.title}
+                variant="display-strong-s"
+                marginBottom="m"
+              >
+                {about.leadership.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.leadership.achievements.map((achievement, index) => (
+                  <Column key={`${achievement.title}-${index}`} fillWidth gap="4">
+                    <Text variant="heading-strong-l">{achievement.title}</Text>
+                    <Text variant="body-default-m" onBackground="neutral-weak">
+                      {achievement.description}
+                    </Text>
+                    {achievement.images && achievement.images.length > 0 && (
+                      <Flex fillWidth paddingTop="m" gap="12" wrap>
+                        {achievement.images.map((image, index) => (
                           <Flex
                             key={index}
                             border="neutral-medium"
