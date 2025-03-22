@@ -9,7 +9,7 @@ const person = {
   role: "Game Developer",
   avatar: "/images/avata.jpg",
   location: "Asia/Kathmandu", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Nepali", "Hindi"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English", "Nepali"], // optional: Leave the array empty if you don't want to display languages
 };
 
 
@@ -18,8 +18,7 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+
     </>
   ),
 };
@@ -71,7 +70,7 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -99,38 +98,32 @@ const about = {
             Developed a multiplayer card game with LAN-based networking, allowing players to connect without the internet.
           </>,
           <>
+            Fixed existing logical issue and smoothed gameplay. 
+          </>,
+          <>
             Built an adaptive UI system that seamlessly adjusts to different screen resolutions and devices.
           </>,
           <>
             Collaborated with backend developers to integrate real-time updates, multiplayer rooms, and dashboard features using Nakama and sockets.
-          </>,
-          <>
-            Worked in toxic work culture.
-          </>,
+          </>
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
         ],
       },
       {
         company: "Avana Game Studios",
         timeframe: "Jul 2022 – Apr 2024",
-        role: "Lead Designer",
+        role: "Unity Game developer",
         achievements: [
+          <>
+            Led the development of a 3D games, handling gameplay mechanics, in-game physics, and animations.
+          </>,
           <>
             Optimized the iOS and Android builds using addressables to reduce game size by 60% .
           </>,
           <>
             Built an adaptive UI system that seamlessly adjusts to different screen resolutions and devices.
-          </>,
-          <>
-            Led the development of a 3D games, handling gameplay mechanics, in-game physics, and animations.
           </>,
           <>
             Developed and fine-tuned fly mechanics, integrating shooting mechanics, hit detection, and movement systems.
@@ -159,38 +152,48 @@ const about = {
     skills: [
       {
         title: "Unity",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        description: <>Experienced in developing both 2D and 3D games across multiple genres, including driving, combat, ragdoll physics, flying, card games, and educational games. Skilled in implementing game mechanics, adaptive UI design, and optimization techniques to enhance performance and player experience.</>,
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Multiplayer & Networking",
+        description: <>Skilled in implementing real-time multiplayer using Mirror, Photon, and Nakama, including LAN-based and client-server architectures.</>,
       },
-    ],
+      {
+        title: "Programming Languages",
+        description: <>Proficient in C#, C++, Python, and Node.js for game development, backend services, and performance-driven applications.</>,
+      },
+      {
+        title: "Game Optimization",
+        description: <>Skilled in Unity Addressables, object pooling, memory management, and UI performance improvements to ensure smooth gameplay.</>,
+      },
+      {
+        title: "Tools & Version Control",
+        description: <>Comfortable with Git, PlasticSCM,  and profiling tools for debugging and optimization.</>,
+      },
+      {
+        title: "Backend & Cloud",
+        description: <>Familiar with backend technologies like Node.js, Django, and Firebase for player authentication, leaderboards, and game data management.</>,
+      },
+      {
+        title: "AI & Algorithms",
+        description: <>Experienced in developing AI-driven pathfinding (A*, Dijkstra), and real-time robot simulations.</>,
+      },
+      {
+        title: "Internet Of things",
+        description: <>Experienced in developing Iot projects, Comfortable enough to create games using IoT devices</>,
+      },
+    ], 
   },
+  hobby: {
+    display: true, // set to false to hide this section
+    title: "Technical skills",
+    skills: [
+      {
+        title: "Unity",
+        description: <>Experienced in developing 2D & 3D games, including game mechanics  , adaptive UI , and optimization techniques.</>,
+      },
+    ]
+  }
 };
 
 const blog = {
@@ -215,76 +218,76 @@ const gallery = {
   description: `A photo collection by ${person.name}`,
   // Images from https://pexels.com
   images: [
-    {
-      src: "/images/gallery/img-01.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-02.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-03.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-04.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-05.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-06.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-07.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-08.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-09.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-10.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-11.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-12.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-13.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-14.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
+    // {
+    //   src: "/images/gallery/img-01.jpg",
+    //   alt: "image",
+    //   orientation: "vertical",
+    // },
+    // {
+    //   src: "/images/gallery/img-02.jpg",
+    //   alt: "image",
+    //   orientation: "horizontal",
+    // },
+    // {
+    //   src: "/images/gallery/img-03.jpg",
+    //   alt: "image",
+    //   orientation: "vertical",
+    // },
+    // {
+    //   src: "/images/gallery/img-04.jpg",
+    //   alt: "image",
+    //   orientation: "horizontal",
+    // },
+    // {
+    //   src: "/images/gallery/img-05.jpg",
+    //   alt: "image",
+    //   orientation: "horizontal",
+    // },
+    // {
+    //   src: "/images/gallery/img-06.jpg",
+    //   alt: "image",
+    //   orientation: "vertical",
+    // },
+    // {
+    //   src: "/images/gallery/img-07.jpg",
+    //   alt: "image",
+    //   orientation: "horizontal",
+    // },
+    // {
+    //   src: "/images/gallery/img-08.jpg",
+    //   alt: "image",
+    //   orientation: "vertical",
+    // },
+    // {
+    //   src: "/images/gallery/img-09.jpg",
+    //   alt: "image",
+    //   orientation: "horizontal",
+    // },
+    // {
+    //   src: "/images/gallery/img-10.jpg",
+    //   alt: "image",
+    //   orientation: "horizontal",
+    // },
+    // {
+    //   src: "/images/gallery/img-11.jpg",
+    //   alt: "image",
+    //   orientation: "vertical",
+    // },
+    // {
+    //   src: "/images/gallery/img-12.jpg",
+    //   alt: "image",
+    //   orientation: "horizontal",
+    // },
+    // {
+    //   src: "/images/gallery/img-13.jpg",
+    //   alt: "image",
+    //   orientation: "horizontal",
+    // },
+    // {
+    //   src: "/images/gallery/img-14.jpg",
+    //   alt: "image",
+    //   orientation: "horizontal",
+    // },
   ],
 };
 
