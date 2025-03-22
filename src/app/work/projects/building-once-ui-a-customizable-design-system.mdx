@@ -1,45 +1,44 @@
 ---
-9title: "Building Once UI, a Customizable Design System"
-publishedAt: "2024-04-08"
-summary: "Development of a flexible and highly customizable design system using Next.js for front-end and Figma for design collaboration."
-images:
-  - "/images/projects/project-01/cover-01.jpg"
-  - "/images/projects/project-01/cover-02.jpg"
-  - "/images/projects/project-01/cover-03.jpg"
-  - "/images/projects/project-01/cover-04.jpg"
+title: "Callbreak : Clash of Cards"
+publishedAt: "2025-01-10"
+summary: "I was one of the developers who worked on this game. It was developed by our team at VedaStudios and published under our sister company, AITC International."
+
 team:
-  - name: "Selene Yu"
-    role: "Software Engineer"
-    avatar: "/images/avatar.jpg"
-    linkedIn: "https://www.linkedin.com/company/once-ui/"
-  - name: "Jane Smith"
-    role: "Product Manager"
-    avatar: "/images/projects/project-01/avatar-01.png"
-    linkedIn: "https://www.linkedin.com/company/once-ui/"
+  - company: "VedaStudios"
+    role: "Unity Game Developer"
+    avatar: "/images/avata.jpg"
+link: "https://play.google.com/store/apps/details?id=com.AITC.CallBreak&hl=en_US"
 ---
 
 ## Overview
 
-Development of a flexible and highly customizable design system using Next.js for front-end and Figma for design collaboration.
+In this project, my primary focus was on LAN gameplay and networking. Additionally, I developed and implemented various features, including audio managers, settings, adaptive UI, animations, daily tasks, free coins, and dashboard updates etc. Worked on almost 50% features of the game. 
 
 ## Key Features
 
-- **Component Library**: Built a set of modular, reusable UI components using React and styled-components in Next.js, focusing on accessibility and responsiveness.
-- **Theming and Customization**: Integrated a theming system that allows easy switching and customization of color palettes, typography, and layout styles using CSS variables and Figma tokens.
-- **Figma Integration**: Collaborated closely with designers by setting up a shared design library in Figma. This library was synchronized with the codebase, ensuring design handoffs were seamless and that design tokens remained consistent across both platforms.
-- **Documentation and Usage Guidelines**: Developed comprehensive documentation with Storybook to showcase components, usage patterns, and best practices, ensuring the design system is easy to adopt by other teams.
+- **LAN Multiplayer**: Built a feature allowing players to play CallBreak game in local network. Utilized Netcode's custom messaging and network variables for communication between players.
+- **Online Multiplayer**: Developed multiplayer features, including playing with friends, room codes, player invites, and quick chat, to enhance the social aspect of the game.
+- **Turn based game**: Created turn based system to identify player turn and sync turn data over the network.
+- **Score and bidding system** fixed the issue in the score and bidding system and integrated it with a stable network architecture using Unity Netcode's custom reliable messaging. This ensured that all clients received packets and that the calculations were fair and consistent across devices, resulting in more reliable packet transmission which fixed score system.
+- **Adaptive UI**: Implemented UI for 60% of game ensuring a responsive and engaging user interface that adapts to different screen sizes and orientations.     
+- **Settings**: Implemented a settings menu for players to adjust preferences such as audio, graphics, and controls.
+- **NativeShare**: Integrated NativeShare functionality to allow players to share room links and score.
+- **Android and IOS**: Worked and created build for both android and IOS.
+- **Documentation and Usage Guidelines**: Developed comprehensive documentation to showcase components, usage patterns, and best practices, ensuring the design system is easy to adopt by other teams.
 
 ## Technologies Used
 
-- **Next.js**: For fast, server-rendered React applications.
-- **Figma**: For creating and managing design assets and prototypes.
-- **Styled-Components**: For styling React components with a modular, themable approach.
-- **Storybook**: For building an interactive, documented component library.
+- **Unity**: Game development.
+- **Github**: Version control.
+- **Visual Studios**:  IDE.
+- **Nakama**: Backend services.
+- **Azure boards**: Boards management.
+- **Xcode**:  To upload game on IOS device.
 
 ## Challenges and Learnings
 
-One key challenge was balancing the need for flexibility with the desire to maintain design consistency. The solution involved creating well-defined design tokens and establishing clear guidelines for when and how components could be customized. Additionally, setting up effective collaboration workflows between designers and developers using Figma and Git was a learning experience that greatly improved the process.
+e key challenge I faced was identifying the cause of the unreliable score system. Although everything appeared to be working fine, the score would occasionally become inconsistent. Since I was fixing the work of a previous developer, I had to thoroughly recheck and refactor the old code. Through this process, I learned the difference in handling game flow for turn-based games versus fast-paced games. 
 
 ## Outcome
 
-The design system is now actively used across multiple projects, leading to faster development cycles, fewer design inconsistencies, and improved collaboration between design and development teams. It has become a foundation for scaling our products efficiently while ensuring a cohesive user experience.
+The game is released on android playstore and soon to be released on IOS.
