@@ -46,8 +46,6 @@ export async function GET(req: Request) {
     {
       width: 1200,
       height: 630,
-      // 🔥 CRITICAL FIX
-      emoji: "twemoji",
     }
   );
 }
