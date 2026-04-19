@@ -5,8 +5,8 @@ export const runtime = "edge";
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
 
-  const title = searchParams.get("title") || "Raman Pokhrel";
-  const subtitle = searchParams.get("subtitle") || "Game Developer Portfolio";
+  const title = searchParams.get("title") ?? "Raman Pokhrel";
+  const subtitle = searchParams.get("subtitle") ?? "Game Developer";
 
   return new ImageResponse(
     (
@@ -17,50 +17,37 @@ export async function GET(req: Request) {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "80px",
-          background: "linear-gradient(135deg, #0f172a, #020617)",
+          padding: "70px",
+          backgroundColor: "#0b1020",
           color: "white",
-          fontFamily: "system-ui, -apple-system, Segoe UI, Roboto",
         }}
       >
-        {/* Main Title */}
         <div
           style={{
-            fontSize: 64,
-            fontWeight: 800,
-            letterSpacing: "-1px",
+            fontSize: 60,
+            fontWeight: 900,
             lineHeight: 1.1,
-            marginBottom: 20,
           }}
         >
           {title}
         </div>
 
-        {/* Subtitle */}
         <div
           style={{
-            fontSize: 28,
-            opacity: 0.8,
+            fontSize: 26,
+            marginTop: 20,
+            opacity: 0.7,
           }}
         >
           {subtitle}
-        </div>
-
-        {/* Bottom Tag */}
-        <div
-          style={{
-            marginTop: 40,
-            fontSize: 20,
-            opacity: 0.6,
-          }}
-        >
-          raman.dev
         </div>
       </div>
     ),
     {
       width: 1200,
       height: 630,
+      // 🔥 CRITICAL FIX
+      emoji: "twemoji",
     }
   );
 }
