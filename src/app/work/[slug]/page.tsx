@@ -25,9 +25,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: any): Metadata | undefined {
+export async function generateMetadata({ params }: any): Promise<Metadata | undefined> {
+  const { slug } = await params;
   const post = getPosts(["src", "app", "work", "projects"]).find(
-    (post) => post.slug === params.slug
+    (post) => post.slug === slug
   );
 
   if (!post) return;
@@ -67,9 +68,10 @@ export function generateMetadata({ params }: any): Metadata | undefined {
   };
 }
 
-export default function Project({ params }: any) {
+export default async function Project({ params }: any) {
+  const { slug } = await params;
   const post = getPosts(["src", "app", "work", "projects"]).find(
-    (post) => post.slug === params.slug
+    (post) => post.slug === slug
   );
 
   if (!post) {
