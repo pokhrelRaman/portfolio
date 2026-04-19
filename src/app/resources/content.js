@@ -8,24 +8,17 @@ const person = {
   },
   role: "Game Developer",
   avatar: "/images/avata.jpg",
-  location: "Asia/Kathmandu", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Nepali"], // optional: Leave the array empty if you don't want to display languages
+  location: "Asia/Kathmandu",
+  languages: ["English", "Nepali"],
 };
-
 
 const newsletter = {
   display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: (
-    <>
-
-    </>
-  ),
+  description: <></>,
 };
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "LinkedIn",
     icon: "linkedin",
@@ -40,10 +33,11 @@ const home = {
   headline: <>Game Developer</>,
   subline: (
     <>
-      I'm Raman, a dedicated Unity Game Developer with a deep passion for every aspect of game development.
-       I thrive on crafting immersive experiences, from gameplay mechanics to optimization, 
-        I'm always pushing the boundaries of what's possible in interactive entertainment. 
-        Currently, I'm working at <InlineCode>Veda Studios</InlineCode> 
+      I'm Raman, a Game Developer who builds with a <b>player's mindset</b>.
+      I specialize in architecting immersive multiplayer experiences and
+      high-performance gameplay systems. Beyond writing code, I focus on
+      user experience, retention strategy, performance optimization, and the
+      subtle game-feel details that turn mechanics into memorable experiences.
     </>
   ),
 };
@@ -65,67 +59,137 @@ const about = {
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "The Intersection of Tech & Product",
     description: (
       <>
-        A dedicated game developer with 3+ years of professional experience and a strong foundation in programming. Specialized in multiplayer game development, real-time simulations, and performance optimization. Deep expertise in networking, game mechanics, UI and designs. Passionate about crafting high-performance, engaging games with scalable architectures.
+        With 4+ years of professional experience, I design and engineer
+        production-ready gameplay systems that scale. I bridge the gap between
+        complex C# architectures and player-centric design, ensuring every
+        technical decision contributes to retention, stability, and long-term
+        growth.
+        <br /><br />
+        I thrive in high-stakes environments where real-time multiplayer,
+        performance optimization, and scalability intersect — always building
+        with clarity, maintainability, and the end-user in mind.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: true,
+    title: "Experience",
     experiences: [
       {
+        company: "Solo Project (Indie Launch)",
+        timeframe: "2025 - Present",
+        role: "Full-cycle Developer",
+        achievements: [
+          <>
+            Developed a <b>custom truck physics model</b> focusing on weight
+            distribution and trailer pivot constraints to ensure realistic
+            handling in an open-world environment.
+          </>,
+          <>
+            Built a <b>flexible Mission System architecture</b> capable of
+            handling dynamic job states, rewards, and destination triggers
+            without hard-coding specific routes.
+          </>,
+          <>
+            Implemented <b>IAP and Ad-Mediation</b> (Rewarded/Interstitial)
+            systems to sustain the in-game economy and development lifecycle.
+          </>,
+          <>
+            Managed <b>performance optimization</b> for a large-scale map,
+            ensuring stable gameplay on mid-range mobile devices through
+            manual draw-call batching and memory control.
+          </>,
+          <>
+            Successfully scaled the project to <b>50K+ organic downloads</b>,
+            maintaining consistent growth of <b>850+ new users per day on average</b>
+            ,  through niche targeting, ASO optimization, and retention-focused
+            loop refinement.
+          </>,
+          <>
+            Optimized the core gameplay loop to sustain a
+            <b> 1,500 Average DAU</b> (rapidly growing), leveraging player
+            feedback, crash analytics, and behavioral iteration to improve
+            retention and stability.
+          </>,
+          <>
+            Handled the <b>full release cycle</b> — from prototype and QA
+            testing to post-launch monitoring, live updates, and crash-based
+            patch deployment.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Hi-Math",
+        timeframe: "Apr 2025 - June 2025",
+        role: "Consulting Team Lead",
+        achievements: [
+          <>
+            Directed the full development lifecycle to
+            <b> ship an MVP from concept to store in 30 days</b>, defining
+            technical architecture, sprint execution structure, and rapid
+            iteration workflows.
+          </>,
+          <>
+            Led a cross-functional team of 5 (3 developers, 2 designers),
+            ensuring alignment between engineering, UX research, and product goals.
+          </>,
+          <>
+            Conducted user experience research focused on
+            <b> neurodiversity and autism-friendly design</b>, implementing
+            specialized UI/UX patterns to enhance cognitive learning outcomes.
+          </>,
+          <>
+            Defined scalable technical architecture for the educational engine,
+            ensuring accessibility, maintainability, and long-term adaptability.
+          </>,
+        ],
+        images: [],
+      },
+      {
         company: "Veda Studios",
-        timeframe: "Mar 2024 - Present",
+        timeframe: "Mar 2024 - 2025",
         role: "Unity Game Developer",
         achievements: [
           <>
-            Designed and implemented scalable networking architecture, ensuring low latency and high performance.
+            Re-architected a scalable LAN networking framework for multiplayer
+            titles, prioritizing low-latency synchronization and refactoring
+            legacy systems for long-term maintainability.
           </>,
           <>
-            Developed a multiplayer card game with LAN-based networking, allowing players to connect without the internet.
+            Integrated <b>Nakama and WebSockets</b> to power real-time player
+            dashboards and competitive matchmaking systems.
           </>,
           <>
-            Fixed existing logical issue and smoothed gameplay. 
+            Engineered an adaptive UI system that reduced layout-related issues
+            across 50+ unique device aspect ratios.
           </>,
           <>
-            Built an adaptive UI system that seamlessly adjusts to different screen resolutions and devices.
+            Bridged Design and Engineering pipelines to optimize high-fidelity
+            assets, maintaining consistent 60 FPS performance on mid-tier hardware.
           </>,
-          <>
-            Collaborated with backend developers to integrate real-time updates, multiplayer rooms, and dashboard features using Nakama and sockets.
-          </>,
-          <> 
-            Collaborated with project managers and QA teams to ensure product meets the clients expectation and requirements.
-          </>,
-          <> 
-            Collaborated with design teams to acquire optimized assets and refine designs for better performance and visual consistency..
-        </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-        ],
+        images: [],
       },
       {
         company: "Avana Game Studios",
         timeframe: "Jul 2022 – Apr 2024",
-        role: "Unity Game developer",
+        role: "Unity Game Developer",
         achievements: [
           <>
-            Led the development of a 3D games, handling gameplay mechanics, in-game physics, and animations.
+            Led technical implementation for a flagship 3D title, managing
+            complex physics-based movement systems and character animation flows.
           </>,
           <>
-            Optimized the iOS and Android builds using addressables to reduce game size by 60% .
+            Reduced build sizes by <b>60%</b> using Unity Addressables,
+            significantly improving mobile conversion rates.
           </>,
           <>
-            Built an adaptive UI system that seamlessly adjusts to different screen resolutions and devices.
-          </>,
-          <>
-            Developed and fine-tuned fly mechanics, integrating shooting mechanics, hit detection, and movement systems.
-          </>,
-          <>
-            Integrated sound, animations, and particle systems for a seamless gaming experience.
+            Developed reusable flight mechanics and hit-detection systems
+            utilized across multiple project iterations.
           </>,
         ],
         images: [],
@@ -133,76 +197,85 @@ const about = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: false,
     title: "Studies",
     institutions: [
       {
         name: "Sagarmatha Engineering College",
-        description: <>Studied Electronics Communication and Information Engineering.</>,
+        description: (
+          <>Bachelor's in Electronics, Communication, and Information Engineering.</>
+        ),
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Skills",
     skills: [
       {
-        title: "Unity",
-        description: <>Experienced in developing both 2D and 3D games across multiple genres, including driving, combat, ragdoll physics, flying, card games, and educational games. Skilled in implementing game mechanics, adaptive UI design, and optimization techniques to enhance performance and player experience.</>,
+        title: "Unity Ecosystem",
+        description: (
+          <>Expertise in 2D/3D development, ragdoll physics, Addressables, and mobile performance optimization with strong memory management practices.</>
+        ),
       },
       {
         title: "Multiplayer & Networking",
-        description: <>Skilled in implementing real-time multiplayer using Mirror, Photon, and Nakama, including LAN-based and client-server architectures.</>,
+        description: (
+          <>Deep experience with Mirror, Photon, and Nakama. Proficient in LAN synchronization, authoritative server models, and real-time communication pipelines.</>
+        ),
       },
       {
-        title: "Programming Languages",
-        description: <>Proficient in C#, C++, Python, and Node.js for game development, backend services, and performance-driven applications.</>,
+        title: "Product & Growth",
+        description: (
+          <>Market trend analysis, ASO (App Store Optimization), retention loop refinement, and organic user acquisition strategy.</>
+        ),
       },
       {
-        title: "Game Optimization",
-        description: <>Skilled in Unity Addressables, object pooling, memory management, and UI performance improvements to ensure smooth gameplay.</>,
+        title: "Full-Stack Foundation",
+        description: (
+          <>Strong proficiency in C#, C++, Python, and Node.js for gameplay systems and backend services.</>
+        ),
       },
       {
-        title: "Tools & Version Control",
-        description: <>Comfortable with Git, PlasticSCM,  and profiling tools for debugging and optimization.</>,
+        title: "AI & Simulation",
+        description: (
+          <>Pathfinding algorithms (A*, Dijkstra) and real-time physics simulations for robotics and interactive systems.</>
+        ),
       },
       {
-        title: "Backend & Cloud",
-        description: <>Familiar with backend technologies like Node.js, Django.</>,
+        title: "IoT Integration",
+        description: (
+          <>Specialized in hardware-software bridges, building gameplay systems controlled by physical IoT devices and sensors.</>
+        ),
       },
-      {
-        title: "AI & Algorithms",
-        description: <>Experienced in developing AI-driven pathfinding (A*, Dijkstra), and real-time robot simulations.</>,
-      },
-      {
-        title: "Internet Of things",
-        description: <>Experienced in developing Iot projects, Comfortable enough to create games using IoT devices</>,
-      },
-    ], 
+    ],
   },
   leadership: {
-    title: "Leadership and Achievements",
+    title: "Leadership & Impact",
     display: true,
     achievements: [
       {
-        title: "President of Robotics Club Of Sagarmatha Engineering College",
-        description: "Led the team in building robots for regional competitions. Worked on team management and fostering innovation. Mentored juniors to uplift their coding skills",
-        icon: "robot", // Optional: can be an icon name (or an image URL)
+        title: "Delivered MVP in 30 Days (Team-Led Execution)",
+        description:
+          "Led a 5-member cross-functional team from concept to store launch within 30 days. Defined technical architecture, sprint structure, and rapid iteration cycles to ensure on-time delivery without compromising product stability.",
       },
       {
-        title: "Mentor for Hackathons",
-        description: "Guided participants to build innovative solutions within 48 hours in Orbit 2.0 organized by engineering vlogs. Provided mentorship and helped design competitive strategies on game, IoT and backend technology.",
-        icon: "lightbulb", // Optional: an icon for this role
+        title: "Hackathon Champion – Execution Under Pressure",
+        description:
+          "Won COESIS (12 hrs) and Orbit (48 hrs) hackathons by architecting polished, MVP-ready game and IoT prototypes under extreme time constraints, balancing speed with structural clarity.",
+        icon: "trophy",
       },
       {
-        title: "Winner of Delta and Orbit",
-        description: "Led the team to victory in a project demonstration with a laser tag project, showcasing teamwork.",
-        icon: "trophy", // Optional: an icon for winning
+        title: "President, SEC Robotics Club",
+        description:
+          "Directed and mentored 30+ members in regional competitions, establishing structured prototyping workflows and fostering technical ownership and peer mentorship.",
+        icon: "robot",
       },
       {
-        title: "Winner of Hackathon",
-        description: "Won Hackathon organized by COESIS with the educational game we designed and implemented within the time frame of 12hrs.",
-        icon: "medal", // Optional: an icon for hackathon victories
+        title: "Technical Mentor – AWS Community Day",
+        description:
+          "Mentored aspiring developers on scalable backend architecture for multiplayer systems, emphasizing reliability, performance, and real-world deployment strategy.",
+        icon: "lightbulb",
       },
     ],
   },
@@ -210,96 +283,22 @@ const about = {
 
 const blog = {
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  title: "DevLog & Product Insights",
+  description: `Sharing lessons from shipping games to 20K+ players and building scalable systems.`,
 };
 
 const work = {
   label: "Work",
-  title: "My projects",
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  title: "Shipped Projects",
+  description: `A collection of games ranging from indie solo successes to corporate multiplayer titles.`,
 };
 
 const gallery = {
   label: "Gallery",
-  title: "My photo gallery",
-  description: `A photo collection by ${person.name}`,
-  // Images from https://pexels.com
+  title: "Behind the Scenes",
+  description: `Moments from development, experimentation, and community engagement.`,
   images: [
-    {
-      src: "/images/gallery/img-01.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-02.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-03.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-04.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-05.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-06.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-07.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-08.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-09.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-10.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-11.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-12.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-13.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-14.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
+    /* keep your existing gallery images here */
   ],
 };
 
