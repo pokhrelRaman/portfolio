@@ -2,7 +2,7 @@
 
 import { mailchimp } from "@/app/resources";
 import { Button, Flex, Heading, Input, Text, Background, Column } from "@/once-ui/components";
-import { useState } from "react";
+import { ChangeEvent, ReactNode, useState } from "react";
 
 function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T {
   let timeout: ReturnType<typeof setTimeout>;
@@ -14,8 +14,8 @@ function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T
 
 type NewsletterProps = {
   display: boolean;
-  title: string | JSX.Element;
-  description: string | JSX.Element;
+  title: string | ReactNode;
+  description: string | ReactNode;
 };
 
 export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
@@ -32,7 +32,7 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
     return emailPattern.test(email);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setEmail(value);
 
