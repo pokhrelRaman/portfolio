@@ -7,7 +7,6 @@ export default function robots() {
         userAgent: "*",
         allow: "/",
         crawlDelay: 0,
-        userAgent: "*",
       },
     ],
     sitemap: `https://${baseURL}/sitemap.xml`,
