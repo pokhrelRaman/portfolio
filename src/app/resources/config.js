@@ -1,5 +1,5 @@
 // const baseURL = "demo.magic-portfolio.com";
-const baseURL = "https://www.ramangamestd.com"
+const baseURL = "ramanpokhrel.vercel.app";
 const routes = {
   "/": true,
   "/about": true,
