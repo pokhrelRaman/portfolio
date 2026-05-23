@@ -31,6 +31,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# seo guides
+SEO_CHANGES_SUMMARY.md
+SEO_OPTIMIZATION_GUIDE.md
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

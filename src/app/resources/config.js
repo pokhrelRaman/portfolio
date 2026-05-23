@@ -1,5 +1,5 @@
-const baseURL = "demo.magic-portfolio.com";
-
+// const baseURL = "demo.magic-portfolio.com";
+const baseURL = "https://www.ramangamestd.com"
 const routes = {
   "/": true,
   "/about": true,
