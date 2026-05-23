@@ -5,22 +5,36 @@ import { baseURL } from "@/app/resources";
 import { person, work } from "@/app/resources/content";
 
 export async function generateMetadata() {
-  const title = work.title;
-  const description = work.description;
+  const title = `${person.name}'s Portfolio - Game Development Projects`;
+  const description = `Explore ${person.name}'s professional game development portfolio featuring multiplayer games, gameplay systems, and indie projects. 4+ years of game engineering experience.`;
   const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
   return {
     title,
     description,
+    keywords: [
+      "game development portfolio",
+      "multiplayer games",
+      "gameplay systems",
+      "indie game projects",
+      "game development examples",
+      "Raman Pokhrel projects",
+      "game programmer portfolio",
+    ].join(", "),
+    authors: [{ name: person.name, url: `https://${baseURL}` }],
     openGraph: {
       title,
       description,
       type: "website",
       url: `https://${baseURL}/work/`,
+      siteName: `${person.name} - Portfolio`,
+      locale: "en_US",
       images: [
         {
           url: ogImage,
           alt: title,
+          width: 1200,
+          height: 630,
         },
       ],
     },
@@ -29,6 +43,9 @@ export async function generateMetadata() {
       title,
       description,
       images: [ogImage],
+    },
+    alternates: {
+      canonical: `https://${baseURL}/work`,
     },
   };
 }

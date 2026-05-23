@@ -16,22 +16,35 @@ import styles from "@/components/about/about.module.scss";
 import { person, about, social } from "@/app/resources/content";
 
 export async function generateMetadata() {
-  const title = about.title;
-  const description = about.description;
+  const title = `${person.name} - About - Professional Game Developer`;
+  const description = `Learn about ${person.name}, an indie and Nepali game developer with 4+ years of experience in multiplayer game systems, performance optimization, and game architecture.`;
   const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
   return {
     title,
     description,
+    keywords: [
+      "about Raman Pokhrel",
+      "game developer biography",
+      "indie developer experience",
+      "game programmer portfolio",
+      "multiplayer game expertise",
+      "Nepali developer",
+    ].join(", "),
+    authors: [{ name: person.name, url: `https://${baseURL}` }],
     openGraph: {
       title,
       description,
       type: "website",
       url: `https://${baseURL}/about`,
+      siteName: `${person.name} - About`,
+      locale: "en_US",
       images: [
         {
           url: ogImage,
           alt: title,
+          width: 1200,
+          height: 630,
         },
       ],
     },
@@ -40,6 +53,9 @@ export async function generateMetadata() {
       title,
       description,
       images: [ogImage],
+    },
+    alternates: {
+      canonical: `https://${baseURL}/about`,
     },
   };
 }

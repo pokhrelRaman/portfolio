@@ -15,19 +15,44 @@ import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
 export async function generateMetadata() {
   return {
     metadataBase: new URL(`https://${baseURL}`),
-    title: home.title,
-    description: home.description,
+    title: `${person.name} - Indie Game Developer | ${person.role}`,
+    description: `${person.name}, a passionate indie and Nepali game developer specializing in multiplayer games, gameplay systems, and mobile games. Portfolio showcasing 4+ years of professional game development experience.`,
+    keywords: [
+      "Raman Pokhrel",
+      "game developer",
+      "indie game developer",
+      "Nepali game developer",
+      "game programmer",
+      "multiplayer games",
+      "gameplay systems",
+      "mobile game developer",
+      "C# developer",
+      "game development portfolio",
+      "game engineering",
+      "game design",
+      "Nepal game developer",
+      "Asia game developer",
+    ].join(", "),
+    authors: [{ name: person.name, url: `https://${baseURL}` }],
+    creator: person.name,
+    publisher: person.name,
     openGraph: {
-      title: `${person.firstName}'s Portfolio`,
-      description: "Portfolio website showcasing my work.",
-      url: baseURL,
-      siteName: `${person.firstName}'s Portfolio`,
+      title: `${person.name} - Indie Game Developer`,
+      description: `${person.name}, an indie game developer specializing in multiplayer experiences and gameplay systems. 4+ years of professional game development.`,
+      url: `https://${baseURL}`,
+      siteName: `${person.name} - Portfolio`,
       locale: "en_US",
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${person.name} - Indie Game Developer`,
+      description: `${person.name}, an indie and Nepali game developer. Specializing in multiplayer games and gameplay systems.`,
     },
     robots: {
       index: true,
       follow: true,
+      nocache: false,
       googleBot: {
         index: true,
         follow: true,
@@ -35,6 +60,10 @@ export async function generateMetadata() {
         "max-image-preview": "large",
         "max-snippet": -1,
       },
+    },
+    canonical: `https://${baseURL}`,
+    alternates: {
+      canonical: `https://${baseURL}`,
     },
   };
 }
